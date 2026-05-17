@@ -355,7 +355,7 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0">
 
-            <form id="appointment-form" action="#" method="post" role="form">
+            <form id="appointment-form" role="form">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -380,6 +380,15 @@
               </div>
               <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
+            <script>
+              (function () {
+                var form = document.getElementById('appointment-form');
+                if (!form) return;
+                form.addEventListener('submit', function (e) {
+                  e.preventDefault();
+                });
+              })();
+            </script>
 
           </div>
 
@@ -425,7 +434,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/appointment-form.js"></script>
+  <script src="assets/js/appointment-form.js?v=2"></script>
 
 </body>
 
